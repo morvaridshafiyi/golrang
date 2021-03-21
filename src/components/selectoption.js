@@ -3,6 +3,7 @@ import React , {useContext} from 'react';
 import UserTableContext from '../context/userTableContext'
 
 function SelectOp() {
+  debugger
   const userTableContext = useContext(UserTableContext)
 
     let SelectHandler = e => {

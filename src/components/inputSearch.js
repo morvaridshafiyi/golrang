@@ -12,7 +12,8 @@ function InputSearch (){
 
             <>
                 <input className="d-flex" placeholder="... جستجو در نام و نام خانوادگی"  onKeyUp={inputHandler} ></input>
-                <button className="" onClick={() => userTableContext.searchInColumns(text)} >جستجو</button>
+                <button className="" onClick={() => userTableContext.dispatch({ type : 'searchInColumns' , payload : { text : text}})} >جستجو</button>
+                
             </>
     )
 }

@@ -8,6 +8,7 @@ function TableRows () {
       <>
         {
           items.map(item => {
+            debugger
             return (
               <tr key={item.id}>
                 <td>{item.id}</td>
@@ -15,7 +16,7 @@ function TableRows () {
                 <td>{item.username}</td>
                 <td>{item.phone}</td>
                 <td>{item.email}</td>
-                <td><button id="deleteRow" onClick={() => userTableContext.deleteRow(item.id)}>حذف</button></td>
+                <td><button id="deleteRow" onClick={() => userTableContext.dispatch({ type : 'deleteRow' , payload : { id : item.id}})}>حذف</button></td>
               </tr>
             )
           })
